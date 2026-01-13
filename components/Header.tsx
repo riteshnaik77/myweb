@@ -17,8 +17,8 @@ export default function Header() {
 
                 <div className="flex gap-4 md:gap-8 items-center">
                     <a
-                        href="/resume.pdf"
-                        download="RiteshNaik_Resume.pdf"
+                        href="/RiteshNaik_Resume.pdf"
+                        download
                         className="text-gray-400 hover:text-white transition-colors text-sm md:text-base font-medium hidden md:block"
                     >
                         Portfolio PDF
