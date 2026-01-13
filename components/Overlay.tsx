@@ -53,6 +53,27 @@ export default function Overlay({ scrollYProgress }: { scrollYProgress: MotionVa
                         <span className="text-[10px] uppercase tracking-widest text-gray-500">Satisfaction</span>
                     </div>
                 </div>
+
+                <p className="mt-12 text-gray-400 text-sm md:text-base max-w-xl mx-auto italic font-light opacity-60">
+                    Explore how enterprise AI products I built improved adoption, efficiency, and user satisfaction — mapped to real KPIs from discovery → launch.
+                </p>
+
+                <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-4 pointer-events-auto">
+                    <a
+                        href="/RiteshNaik_Resume.pdf"
+                        download
+                        className="px-8 py-3 bg-white text-black rounded-full font-bold text-base hover:bg-gray-200 transition-colors shadow-lg shadow-white/5"
+                    >
+                        Portfolio PDF
+                    </a>
+                    <a
+                        href="https://calendly.com/riteshnaik77/30min"
+                        target="_blank"
+                        className="px-8 py-3 bg-transparent border border-white/20 text-white rounded-full font-bold text-base hover:bg-white/10 transition-colors"
+                    >
+                        Schedule 15-min Call
+                    </a>
+                </div>
             </motion.div>
 
             {/* Section 2 - Transition */}

@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-    title: "Ritesh | AI Product Manager | Enterprise AI, Automation & RAG Platforms",
-    description: "Portfolio of Ritesh — AI Product Manager & former founder. Demonstrated impact: 90% time savings, 80% automation uplift, 95% satisfaction. Case studies in HRTech, internal platforms, and AI workflows.",
+    title: "Ritesh | AI Product Manager — Enterprise AI, RAG, Automation",
+    description: "Portfolio of Ritesh — AI Product Manager and former founder. AI products with measurable business impact (90% time saved, 80% automation uplift, adoption signals). Case studies in AI workflows, RAG, and internal platforms.",
 };
 
 export default function RootLayout({
