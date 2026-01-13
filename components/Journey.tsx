@@ -6,30 +6,21 @@ import { useRef } from "react";
 
 const journey = [
     {
-        year: "2022-Present",
+        year: "2023-Present",
         role: "Product Manager – AI & Automation",
         company: "PeopleLogic Business Solutions",
         type: "HRTech & AI Products",
-        description: "Own end-to-end AI product portfolio. Built HR Assist (90% time saved, 95% CSAT), AI Recruiter Toolkit (2 hours → 1 min), SpringBoard Analytics (80% manual effort eliminated). Managing 4 direct reports.",
-        skills: ["RAG & LLMs", "Product Leadership", "AI/ML Products"],
+        description: "Led AI roadmap and product strategy. Designed RAG systems for HR query automation that improved policy lookup efficiency by 90%. Owning end-to-end AI product portfolio from discovery to post-launch optimization.",
+        skills: ["AI Roadmap", "RAG Systems", "Product Strategy"],
         color: "from-purple-500 to-pink-600"
-    },
-    {
-        year: "2020-2022",
-        role: "Business Development Specialist",
-        company: "Open Financial Technologies",
-        type: "FinTech",
-        description: "Partnered with Product and Data teams on growth experiments. Drove 20% increase in ARPA through pricing strategy. Accelerated customer acquisition by 30%.",
-        skills: ["Product Growth", "Pricing Strategy", "GTM Planning"],
-        color: "from-emerald-500 to-green-600"
     },
     {
         year: "2018-2020",
         role: "Co-Founder & CEO",
         company: "PocketTrucks (Startup)",
         type: "Logistics Marketplace",
-        description: "Built asset-light logistics platform from 0→1. Achieved 80% fleet utilization in 60 days. Secured ₹10L seed funding. Learned PMF, survival, and execution under pressure.",
-        skills: ["0→1 Product", "Fundraising", "GTM Strategy"],
+        description: "Built asset-light logistics marketplace from 0→1. Achieved early fleet utilization targets and adopted rapid product-market feedback loops. Secured seed funding and managed core operations.",
+        skills: ["0→1 Growth", "Marketplace Ops", "Fundraising"],
         color: "from-orange-500 to-red-600"
     },
     {
@@ -37,18 +28,9 @@ const journey = [
         role: "Procurement Engineer",
         company: "LKQ India",
         type: "Automotive Aftermarket",
-        description: "Designed analytics-powered sourcing workflows. Improved procurement productivity by 70% through process optimization and data insights.",
-        skills: ["Process Optimization", "Analytics", "Supply Chain"],
+        description: "Designed analytics-powered sourcing workflows. Improved procurement productivity by 70% through process optimization and data-driven supplier management.",
+        skills: ["Process Optimization", "Data Analytics", "Supply Chain"],
         color: "from-cyan-500 to-blue-600"
-    },
-    {
-        year: "2014-2015",
-        role: "Graduate Apprentice Trainee",
-        company: "Volvo Buses India",
-        type: "Automotive Engineering",
-        description: "Contributed to new product development for BRT and SLF bus prototypes. Supported engineering teams in design validation and market adaptation.",
-        skills: ["Product Engineering", "Prototyping", "Cross-functional Collaboration"],
-        color: "from-slate-500 to-gray-600"
     }
 ];
 

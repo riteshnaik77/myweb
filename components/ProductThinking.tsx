@@ -8,11 +8,12 @@ export default function ProductThinking() {
             <div className="max-w-6xl mx-auto text-center">
                 <h2 className="text-4xl md:text-5xl font-bold mb-20 text-white tracking-tight">How I Think</h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {[
-                        { title: "User-Centric", desc: "Obsessive about the user problem, not the shiny tech. If it doesn't solve a pain point, it doesn't ship." },
-                        { title: "Metrics-First", desc: "Define success before writing code. Tracking utilization, retention, and revenue impact from Day 1." },
-                        { title: "AI as Leverage", desc: "AI isn't the product; it's the multiplier. Using LLMs to remove friction, not add novelty." }
+                        { title: "User-Centricity", desc: "Start with user behavior, not tech. Align solutions with pain intensity and frequency to ensure high adoption." },
+                        { title: "Data First", desc: "Define hypotheses and success KPIs (time, adoption, retention) before building. Iterate based on evidence." },
+                        { title: "Business Alignment", desc: "Build features that improve revenue, reduce cost, or increase retention — avoid vanity metrics." },
+                        { title: "AI as Amplifier", desc: "Use AI when it simplifies complexity, increases scale, or reduces manual effort — not for novelty." }
                     ].map((item, i) => (
                         <motion.div
                             key={i}
@@ -20,10 +21,10 @@ export default function ProductThinking() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: i * 0.15 }}
                             viewport={{ once: true }}
-                            className="p-8 md:p-10 bg-white/5 rounded-3xl border border-white/5 hover:bg-white/10 transition-colors"
+                            className="p-8 bg-white/5 rounded-3xl border border-white/5 hover:bg-white/10 transition-colors text-left"
                         >
-                            <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
-                            <p className="text-lg text-gray-400 leading-relaxed">{item.desc}</p>
+                            <h3 className="text-xl font-bold text-white mb-4">{item.title}</h3>
+                            <p className="text-base text-gray-400 leading-relaxed">{item.desc}</p>
                         </motion.div>
                     ))}
                 </div>

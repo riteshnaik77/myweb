@@ -15,28 +15,19 @@ export default function Header() {
                     Ritesh
                 </div>
 
-                <div className="flex gap-6 md:gap-8 items-center">
+                <div className="flex gap-4 md:gap-8 items-center">
                     <a
-                        href="mailto:riteshnaik77@gmail.com"
-                        className="text-gray-400 hover:text-white transition-colors text-sm md:text-base font-medium"
+                        href="/resume.pdf"
+                        download="RiteshNaik_Resume.pdf"
+                        className="text-gray-400 hover:text-white transition-colors text-sm md:text-base font-medium hidden md:block"
                     >
-                        Contact
+                        Portfolio PDF
                     </a>
                     <a
-                        href="https://github.com/riteshnaik77"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-white transition-colors text-sm md:text-base font-medium"
+                        href="mailto:riteshnaik77@gmail.com?subject=Portfolio Review – Ritesh"
+                        className="px-5 py-2 bg-white text-black rounded-full text-sm font-bold hover:bg-gray-200 transition-colors"
                     >
-                        GitHub
-                    </a>
-                    <a
-                        href="https://www.linkedin.com/in/ritesh-naik/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-white transition-colors text-sm md:text-base font-medium"
-                    >
-                        LinkedIn
+                        Let's Talk
                     </a>
                 </div>
             </nav>

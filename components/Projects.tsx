@@ -5,41 +5,51 @@ import { motion } from "framer-motion";
 const projects = [
     {
         title: "HR RAG Assistant",
-        problem: "Policy lookup took 20+ mins per query.",
-        built: "RAG pipeline on Pinecone + LangChain.",
-        impact: "90% time reduction.",
-        gradient: "from-blue-600 to-indigo-900"
+        problem: "HR teams spent 20–30 minutes per query searching manual HR policies.",
+        persona: "HR Operations Specialists",
+        hypothesis: "If employees can query policies conversationally, then lookup time and support load will decrease.",
+        solution: "Built a RAG-based internal HR Assistant with context-aware semantic search.",
+        impact: "90% Time Saved (30 mins → 2 mins), 95% Internal CSAT, 4-6 queries/user/day.",
+        learnings: "Users prefer concise, sentence-level responses over policy dumps.",
+        gradient: "from-blue-600/20 to-indigo-900/20",
+        accent: "bg-blue-500"
     },
     {
-        title: "Resume Evaluator",
-        problem: "Manual screening took 15 mins/resume.",
-        built: "LLM-based scoring & entity extraction.",
-        impact: "Screening cut from 15 → 3 mins.",
-        gradient: "from-purple-600 to-pink-900"
+        title: "AI Resume Evaluator",
+        problem: "Manual screening took 15 mins/resume with inconsistent scoring across recruiters.",
+        persona: "Recruiters & Hiring Managers",
+        hypothesis: "If AI can score resumes against JD criteria with explainability, then throughput and match quality increase.",
+        solution: "Built a resume parser and evaluator with suitability scores and reasoning prompts.",
+        impact: "3× Faster Screening, 80% Time Saved, 30% Improvement in shortlist alignment.",
+        learnings: "Explainability (per-criterion scores) was the key to user trust.",
+        gradient: "from-purple-600/20 to-pink-900/20",
+        accent: "bg-purple-500"
     },
     {
-        title: "SpringBoard Platform",
-        problem: "Manual onboarding flows were error-prone.",
-        built: "Automated workflow engine.",
-        impact: "5 hours/month → 5 minutes automation.",
-        gradient: "from-emerald-600 to-green-900"
-    },
-    {
-        title: "PocketTrucks (Founder)",
-        problem: "Fleet underutilization in logistics.",
-        built: "Real-time dispatch algorithm.",
-        impact: "Increased utilization + Secured seed funding.",
-        gradient: "from-orange-600 to-red-900"
+        title: "SpringBoard Automation",
+        problem: "Monthly HR data tasks took 5–6 hours of error-prone manual paper form handling.",
+        persona: "HR Admin & Operations",
+        hypothesis: "Automating data feeds and status workflows will cut completion time and human error.",
+        solution: "Built an internal automation platform with real-time dashboards and status tracking.",
+        impact: "98% Work Reduction (6 hrs → 5 mins), 75% Error Reduction, High stickiness.",
+        learnings: "Ops automation adoption is highest when time-saved metrics are visible to the team.",
+        gradient: "from-emerald-600/20 to-green-900/20",
+        accent: "bg-emerald-500"
     }
 ];
 
 export default function Projects() {
     return (
-        <div className="bg-[#0B0B0F] py-32 px-4 md:px-12 relative z-10 w-full">
+        <div id="projects" className="bg-[#0B0B0F] py-32 px-4 md:px-12 relative z-10 w-full scroll-mt-20">
             <div className="max-w-7xl mx-auto">
-                <h2 className="text-4xl md:text-6xl font-bold mb-20 text-white text-center tracking-tight">Case Studies</h2>
+                <div className="mb-20">
+                    <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">Case Studies</h2>
+                    <p className="text-xl text-gray-400 max-w-2xl">
+                        Real products solving enterprise problems with measurable impact.
+                    </p>
+                </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((p, i) => (
                         <motion.div
                             key={i}
@@ -47,24 +57,34 @@ export default function Projects() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: i * 0.1 }}
                             viewport={{ once: true, margin: "-100px" }}
-                            className="group relative bg-[#121212] border border-white/10 p-8 md:p-12 rounded-3xl overflow-hidden hover:border-white/20 transition-all hover:shadow-2xl hover:shadow-blue-900/10"
+                            className="group relative bg-white/5 border border-white/10 p-8 rounded-3xl overflow-hidden hover:border-white/20 transition-all hover:bg-white/[0.08]"
                         >
-                            <div className={`absolute inset-0 bg-gradient-to-br ${p.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-700 ease-out`} />
+                            <div className={`absolute inset-0 bg-gradient-to-br ${p.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />
 
-                            <h3 className="text-3xl font-bold text-white mb-6 z-10 relative">{p.title}</h3>
+                            <div className="relative z-10">
+                                <div className={`w-12 h-1 ${p.accent} mb-6 rounded-full`} />
+                                <h3 className="text-2xl font-bold text-white mb-8">{p.title}</h3>
 
-                            <div className="space-y-6 text-gray-400 z-10 relative">
-                                <div>
-                                    <span className="text-xs uppercase tracking-widest text-gray-600 font-semibold mb-1 block">Problem</span>
-                                    <p className="text-base md:text-lg text-gray-300">{p.problem}</p>
-                                </div>
-                                <div>
-                                    <span className="text-xs uppercase tracking-widest text-gray-600 font-semibold mb-1 block">What I Built</span>
-                                    <p className="text-base md:text-lg text-gray-300">{p.built}</p>
-                                </div>
-                                <div className="pt-4 border-t border-white/5">
-                                    <span className="text-xs uppercase tracking-widest text-blue-400 font-bold mb-1 block">Impact</span>
-                                    <p className="text-xl md:text-2xl font-bold text-white">{p.impact}</p>
+                                <div className="space-y-6">
+                                    <div className="space-y-2">
+                                        <span className="text-[10px] uppercase tracking-widest text-gray-500 font-bold">The Problem</span>
+                                        <p className="text-sm text-gray-300 leading-relaxed">{p.problem}</p>
+                                    </div>
+
+                                    <div className="space-y-2">
+                                        <span className="text-[10px] uppercase tracking-widest text-gray-500 font-bold">The Solution</span>
+                                        <p className="text-sm text-gray-300 leading-relaxed">{p.solution}</p>
+                                    </div>
+
+                                    <div className="pt-6 border-t border-white/10">
+                                        <span className="text-[10px] uppercase tracking-widest text-blue-400 font-bold mb-2 block">Key Impact</span>
+                                        <p className="text-lg font-bold text-white leading-snug">{p.impact}</p>
+                                    </div>
+
+                                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 pt-4">
+                                        <span className="text-[10px] uppercase tracking-widest text-gray-500 font-bold mb-1 block">Learning</span>
+                                        <p className="text-xs text-gray-400 italic">"{p.learnings}"</p>
+                                    </div>
                                 </div>
                             </div>
                         </motion.div>

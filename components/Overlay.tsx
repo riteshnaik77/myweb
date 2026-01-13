@@ -3,78 +3,109 @@
 import { MotionValue, useTransform, motion } from "framer-motion";
 
 export default function Overlay({ scrollYProgress }: { scrollYProgress: MotionValue<number> }) {
-    // Section 1: 0% - 15% (Fade out by 20%)
-    const opacity1 = useTransform(scrollYProgress, [0, 0.1, 0.2], [1, 1, 0]);
-    const y1 = useTransform(scrollYProgress, [0, 0.2], [0, -50]);
-    const scale1 = useTransform(scrollYProgress, [0, 0.2], [1, 0.9]);
+    // Section 1: 0% - 15% (Founder Identity)
+    const opacity1 = useTransform(scrollYProgress, [0, 0.1, 0.15], [1, 1, 0]);
+    const y1 = useTransform(scrollYProgress, [0, 0.15], [0, -50]);
 
-    // Section 2: 25% - 40% (Moves in from left)
-    const opacity2 = useTransform(scrollYProgress, [0.2, 0.25, 0.35, 0.4], [0, 1, 1, 0]);
-    const x2 = useTransform(scrollYProgress, [0.2, 0.25, 0.4], [-50, 0, -50]);
+    // Section 2: 15% - 40% (Transition to PM + AI Focus)
+    const opacity2 = useTransform(scrollYProgress, [0.15, 0.2, 0.35, 0.4], [0, 1, 1, 0]);
+    const x2 = useTransform(scrollYProgress, [0.15, 0.2, 0.4], [-50, 0, -50]);
 
-    // Section 3: 50% - 65% (Moves in from right)
-    const opacity3 = useTransform(scrollYProgress, [0.45, 0.5, 0.6, 0.65], [0, 1, 1, 0]);
-    const x3 = useTransform(scrollYProgress, [0.45, 0.5, 0.65], [50, 0, 50]);
+    // Section 3: 40% - 65% (Impact Highlights)
+    const opacity3 = useTransform(scrollYProgress, [0.4, 0.45, 0.6, 0.65], [0, 1, 1, 0]);
+    const y3 = useTransform(scrollYProgress, [0.4, 0.45], [50, 0]);
 
-    // Section 4: 70% - 85% (Center rise)
-    const opacity4 = useTransform(scrollYProgress, [0.7, 0.75, 0.85, 0.9], [0, 1, 1, 0]);
-    const y4 = useTransform(scrollYProgress, [0.7, 0.75], [50, 0]);
+    // Section 4: 65% - 85% (Case Study Teasers)
+    const opacity4 = useTransform(scrollYProgress, [0.65, 0.7, 0.8, 0.85], [0, 1, 1, 0]);
+    const x4 = useTransform(scrollYProgress, [0.65, 0.7, 0.85], [50, 0, 50]);
+
+    // Section 5: 85% - 100% (Personal Philosophy + Next Steps)
+    const opacity5 = useTransform(scrollYProgress, [0.85, 0.9, 1], [0, 1, 1]);
+    const y5 = useTransform(scrollYProgress, [0.85, 0.9], [50, 0]);
 
     return (
         <div className="absolute inset-0 z-20 pointer-events-none flex flex-col justify-center items-center text-white">
             {/* Section 1 - Intro */}
-            <motion.div style={{ opacity: opacity1, y: y1, scale: scale1 }} className="absolute text-center px-4 max-w-4xl">
-                <h1 className="text-5xl md:text-8xl font-bold tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400">
+            <motion.div style={{ opacity: opacity1, y: y1 }} className="absolute text-center px-4 max-w-5xl">
+                <h1 className="text-5xl md:text-8xl font-bold tracking-tighter mb-8 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400">
                     Ritesh
                 </h1>
-                <p className="text-xl md:text-3xl text-gray-300 font-light tracking-wide mb-4">
-                    AI Product Manager & Former Founder
+                <p className="text-xl md:text-4xl text-white font-medium tracking-tight mb-4 text-balance">
+                    AI Product Manager & Former Founder Driving Real Business Impact
                 </p>
-                <p className="text-gray-500 text-lg font-medium">
-                    Building AI platforms, workflows, and products that move business metrics.
+                <p className="text-gray-400 text-lg md:text-xl font-light max-w-3xl mx-auto">
+                    Building enterprise AI platforms, RAG workflows, and automation products that increase productivity, reduce time-to-value, and improve user satisfaction.
+                </p>
+
+                <div className="mt-12 flex flex-wrap justify-center gap-6 opacity-80">
+                    <div className="flex flex-col items-center">
+                        <span className="text-3xl font-bold text-white">90%</span>
+                        <span className="text-[10px] uppercase tracking-widest text-gray-500">Time Saved</span>
+                    </div>
+                    <div className="w-px h-10 bg-white/10" />
+                    <div className="flex flex-col items-center">
+                        <span className="text-3xl font-bold text-white">80%</span>
+                        <span className="text-[10px] uppercase tracking-widest text-gray-500">Automation</span>
+                    </div>
+                    <div className="w-px h-10 bg-white/10" />
+                    <div className="flex flex-col items-center">
+                        <span className="text-3xl font-bold text-white">95%</span>
+                        <span className="text-[10px] uppercase tracking-widest text-gray-500">Satisfaction</span>
+                    </div>
+                </div>
+            </motion.div>
+
+            {/* Section 2 - Transition */}
+            <motion.div style={{ opacity: opacity2, x: x2 }} className="absolute left-6 md:left-24 top-1/2 -translate-y-1/2 max-w-2xl text-left">
+                <h2 className="text-4xl md:text-7xl font-bold mb-6 text-white leading-tight tracking-tighter">
+                    From Startup to <br /> Enterprise AI Products
+                </h2>
+                <p className="text-xl md:text-3xl text-gray-300 leading-relaxed border-l-4 border-blue-500 pl-6">
+                    Solving real-world problems with <br />
+                    <span className="text-white font-semibold italic">measurable business impact</span>.
                 </p>
             </motion.div>
 
-            {/* Section 2 - Founder Journey */}
-            <motion.div style={{ opacity: opacity2, x: x2 }} className="absolute left-4 md:left-20 top-1/2 -translate-y-1/2 max-w-xl text-left px-6">
-                <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight">
-                    From Founder <br /> to Product Leader
+            {/* Section 3 - Philosophy */}
+            <motion.div style={{ opacity: opacity3, y: y3 }} className="absolute text-center px-4 max-w-4xl">
+                <h2 className="text-4xl md:text-7xl font-bold mb-8 text-white tracking-tighter">
+                    "Move Metrics, Not Features"
                 </h2>
-                <p className="text-xl text-gray-300 leading-relaxed border-l-4 border-blue-500 pl-4">
-                    Built and shut down a logistics startup. <br />
-                    Learned <span className="text-white font-semibold">ownership</span>, <span className="text-white font-semibold">velocity</span>, and <span className="text-white font-semibold">survival</span>.
+                <div className="flex flex-wrap justify-center gap-4 md:gap-12 text-balance">
+                    <span className="text-xl md:text-2xl text-gray-400 font-light border border-white/10 px-6 py-2 rounded-full whitespace-nowrap">Impact over Output</span>
+                    <span className="text-xl md:text-2xl text-gray-400 font-light border border-white/10 px-6 py-2 rounded-full whitespace-nowrap">Time Saved</span>
+                    <span className="text-xl md:text-2xl text-gray-400 font-light border border-white/10 px-6 py-2 rounded-full whitespace-nowrap">CSAT Improved</span>
+                </div>
+            </motion.div>
+
+            {/* Section 4 - Value Prop */}
+            <motion.div style={{ opacity: opacity4, x: x4 }} className="absolute right-6 md:right-24 top-1/2 -translate-y-1/2 max-w-2xl text-right">
+                <h2 className="text-4xl md:text-7xl font-bold mb-6 text-white leading-tight tracking-tighter">
+                    Transparency. <br /> Metrics. Direction.
+                </h2>
+                <p className="text-xl md:text-3xl text-gray-300 leading-relaxed border-r-4 border-purple-500 pr-6">
+                    What I build is not flashy — it’s <span className="text-white font-semibold">useful</span>, <span className="text-white font-semibold">measurable</span>, and <span className="text-white font-semibold">enterprise-ready</span>.
                 </p>
             </motion.div>
 
-            {/* Section 3 - AI Work */}
-            <motion.div style={{ opacity: opacity3, x: x3 }} className="absolute right-4 md:right-20 top-1/2 -translate-y-1/2 max-w-xl text-right px-6">
-                <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight">
-                    AI Products. <br /> Real Impact.
+            {/* Section 5 - Final CTA */}
+            <motion.div style={{ opacity: opacity5, y: y5 }} className="absolute text-center px-4 max-w-4xl">
+                <h2 className="text-5xl md:text-8xl font-bold mb-8 text-white tracking-tighter">
+                    Let’s build <br /> what matters.
                 </h2>
-                <p className="text-xl text-gray-300 leading-relaxed border-r-4 border-purple-500 pr-4">
-                    RAG, workflow automation, internal platforms.<br />
-                    Not demos — <span className="text-white font-semibold">production systems</span>.
+                <p className="text-xl md:text-3xl text-gray-400 font-light mb-12">
+                    Your next product challenge starts here.
                 </p>
-            </motion.div>
-
-            {/* Section 4 - Metrics */}
-            <motion.div style={{ opacity: opacity4, y: y4 }} className="absolute bottom-20 md:bottom-auto md:top-2/3 text-center max-w-4xl px-4">
-                <h2 className="text-3xl md:text-5xl font-bold mb-10 text-white">
-                    "I don’t ship features. I move metrics."
-                </h2>
-                <div className="grid grid-cols-3 gap-8 md:gap-16">
-                    <div className="flex flex-col items-center">
-                        <span className="text-4xl md:text-6xl font-bold text-blue-500">90%</span>
-                        <span className="text-sm md:text-base text-gray-400 mt-2 uppercase tracking-widest">Time Saved</span>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <span className="text-4xl md:text-6xl font-bold text-purple-500">80%</span>
-                        <span className="text-sm md:text-base text-gray-400 mt-2 uppercase tracking-widest">Automation</span>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <span className="text-4xl md:text-6xl font-bold text-green-500">95%</span>
-                        <span className="text-sm md:text-base text-gray-400 mt-2 uppercase tracking-widest">CSAT</span>
-                    </div>
+                <div className="flex flex-col md:flex-row items-center justify-center gap-4 pointer-events-auto">
+                    <button
+                        onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                        className="px-8 py-4 bg-white text-black rounded-full font-bold text-lg hover:bg-gray-200 transition-colors"
+                    >
+                        View Case Studies
+                    </button>
+                    <a href="https://calendly.com/riteshnaik77/30min" target="_blank" className="px-8 py-4 bg-transparent border border-white/20 text-white rounded-full font-bold text-lg hover:bg-white/10 transition-colors">
+                        Schedule Call
+                    </a>
                 </div>
             </motion.div>
         </div>
