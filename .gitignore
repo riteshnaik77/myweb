@@ -1,0 +1,52 @@
+# dependencies
+node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+.env
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# scripts
+read_resume.py
+read_resume2.py
+gen_rename.py
+gen_manifest.py
+gen_manifest.js
+rename_frames.js
+resume_text.txt
+resume_output.txt
+rename_script.bat
