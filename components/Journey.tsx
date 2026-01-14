@@ -35,7 +35,7 @@ const journey = [
     },
     {
         year: "2018-2020",
-        role: "Co-Founder & CEO",
+        role: "Co-Founder",
         company: "PocketTrucks (Startup)",
         type: "Logistics Marketplace",
         description: "Built asset-light logistics marketplace from 0→1. Achieved early fleet utilization targets and adopted rapid product-market feedback loops. Secured seed funding and managed core operations.",
