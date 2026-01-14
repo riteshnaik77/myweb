@@ -1,6 +1,7 @@
 "use client";
 
 import { MotionValue, useTransform, motion } from "framer-motion";
+import { track } from "@vercel/analytics";
 
 export default function Overlay({ scrollYProgress }: { scrollYProgress: MotionValue<number> }) {
     // Section 1: 0% - 15% (Founder Identity)
@@ -62,6 +63,7 @@ export default function Overlay({ scrollYProgress }: { scrollYProgress: MotionVa
                     <a
                         href="/RiteshNaik_Resume.pdf"
                         download
+                        onClick={() => track('portfolio_pdf_clicked', { button: 'hero' })}
                         className="px-8 py-3 bg-white text-black rounded-full font-bold text-base hover:bg-gray-200 transition-colors shadow-lg shadow-white/5"
                     >
                         Portfolio PDF
@@ -69,6 +71,7 @@ export default function Overlay({ scrollYProgress }: { scrollYProgress: MotionVa
                     <a
                         href="https://calendly.com/riteshnaik77/30min"
                         target="_blank"
+                        onClick={() => track('schedule_call_clicked', { button: 'hero' })}
                         className="px-8 py-3 bg-transparent border border-white/20 text-white rounded-full font-bold text-base hover:bg-white/10 transition-colors"
                     >
                         Schedule 15-min Call

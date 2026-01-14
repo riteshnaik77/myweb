@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { track } from "@vercel/analytics";
 
 const projects = [
     {
@@ -181,6 +182,7 @@ export default function Projects() {
                         <a
                             href="/RiteshNaik_Resume.pdf"
                             download
+                            onClick={() => track('portfolio_pdf_clicked', { button: 'footer' })}
                             className="px-10 py-4 bg-white text-black rounded-full font-bold text-lg hover:bg-gray-200 transition-all shadow-xl shadow-white/5 active:scale-95"
                         >
                             Download Full Portfolio PDF
@@ -188,6 +190,7 @@ export default function Projects() {
                         <a
                             href="https://calendly.com/riteshnaik77/30min"
                             target="_blank"
+                            onClick={() => track('schedule_call_clicked', { button: 'footer' })}
                             className="px-10 py-4 bg-transparent border border-white/20 text-white rounded-full font-bold text-lg hover:bg-white/10 transition-all active:scale-95"
                         >
                             Book 15-min Walkthrough

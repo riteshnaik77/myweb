@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { track } from "@vercel/analytics";
 
 export default function Header() {
     return (
@@ -19,6 +20,7 @@ export default function Header() {
                     <a
                         href="/RiteshNaik_Resume.pdf"
                         download
+                        onClick={() => track('portfolio_pdf_clicked', { button: 'header' })}
                         className="text-gray-400 hover:text-white transition-colors text-sm md:text-base font-medium hidden md:block"
                     >
                         Portfolio PDF

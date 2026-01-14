@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+import { Analytics } from '@vercel/analytics/react';
+
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
@@ -11,12 +13,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
     children,
-}: Readonly<{
+}: {
     children: React.ReactNode;
-}>) {
+}) {
     return (
-        <html lang="en" className="dark scroll-smooth">
-            <body className={`${inter.variable} font-sans bg-[#0B0B0F] antialiased`}>{children}</body>
+        <html lang="en" className="dark">
+            <body className={`${inter.variable} font-sans bg-[#0B0B0F]`}>
+                {children}
+                <Analytics />
+            </body>
         </html>
     );
 }

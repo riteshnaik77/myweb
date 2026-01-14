@@ -1,5 +1,7 @@
 "use client";
 
+import { track } from "@vercel/analytics";
+
 export default function Footer() {
     return (
         <footer className="py-32 border-t border-white/5 w-full bg-[#0B0B0F] relative overflow-hidden">
@@ -15,6 +17,7 @@ export default function Footer() {
                         <a
                             href="https://calendly.com/riteshnaik77/30min"
                             target="_blank"
+                            onClick={() => track('schedule_call_clicked', { button: 'footer_main' })}
                             className="w-full md:w-auto px-10 py-5 bg-white text-black rounded-full font-bold text-lg hover:bg-gray-200 transition-all transform hover:scale-105"
                         >
                             Schedule a 15-min Call
