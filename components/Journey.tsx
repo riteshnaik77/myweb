@@ -40,8 +40,8 @@ const journey = [
         type: "Logistics Marketplace",
         description: "Built asset-light logistics marketplace from 0→1. Achieved early fleet utilization targets and adopted rapid product-market feedback loops. Secured seed funding and managed core operations.",
         milestones: [
-            "H1 2018 — MVP launch & initial carrier onboarding (50+)",
-            "H2 2018 — Reached 190+ shippers & seed round completion",
+            "H1 2018 — MVP launch & initial shipper onboarding (50+)",
+            "H2 2018 — Reached 190+ drivers & seed round completion",
             "2019 — Scaling matching algorithm & pricing workflows"
         ],
         skills: ["0→1 Growth", "Marketplace Ops", "Fundraising"],

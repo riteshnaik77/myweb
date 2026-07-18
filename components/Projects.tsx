@@ -11,7 +11,7 @@ const projects = [
         hypothesis: "A real-time matching marketplace will optimize capacity and reduce empty returns vs legacy phone-based coordination.",
         kpis: "Onboard 50+ shippers / 100+ carriers | Target repeat order rate ≥ 30% within 30 days.",
         solution: "Built a 0→1 marketplace with real-time bidding, live tracking, and trust-based feedback loops.",
-        impact: "190+ Shippers | 50+ Carriers | 35% MoM repeat usage | 25% reduction in empty returns.",
+        impact: "190+ Drivers | 50+ Shippers | 35% MoM repeat usage | 25% reduction in empty returns.",
         adoption: "Users reached weekly booking cadence within first 3 weeks of onboarding.",
         tradeoffs: "Opted for bidding-first model vs fixed-pricing to build liquidity in a price-sensitive market.",
         risks: "Supply-side churn. Mitigation: Implemented driver referral incentives and fast-pay cycles.",
