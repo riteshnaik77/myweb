@@ -23,11 +23,11 @@ export default function Home() {
                     <div className="max-w-7xl mx-auto px-6 md:px-12 py-6 flex flex-col md:flex-row md:items-center gap-3 md:gap-6">
                         <span className="shrink-0 inline-flex items-center gap-2 text-yellow-400 font-bold text-xs uppercase tracking-widest">
                             <span className="h-2 w-2 rounded-full bg-yellow-400" />
-                            National Recognition · ISF 2026
+                            National Award · ISF 2026
                         </span>
                         <p className="text-gray-200 text-sm md:text-base leading-relaxed">
-                            <span className="font-semibold text-white">PLUTO</span> selected by the <span className="font-semibold text-white">Indian Staffing Federation (ISF)</span> as one of{" "}
-                            <span className="font-semibold text-white">18 Recognised Initiatives of the Staffing Industry 2026</span> — shortlisted to present a live demo at ISF, Delhi (Aug 2026).
+                            <span className="font-semibold text-white">PLUTO</span> won the <span className="font-semibold text-white">Indian Staffing Federation&apos;s Staffing Excellence Recognition 2026</span> for{" "}
+                            <span className="font-semibold text-white">Outstanding Initiative</span> — awarded on stage at the ISF National Conference, Delhi (Aug 2026).
                         </p>
                     </div>
                 </section>
