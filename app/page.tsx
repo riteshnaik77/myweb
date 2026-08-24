@@ -2,6 +2,7 @@ import ScrollyCanvas from "@/components/ScrollyCanvas";
 import Projects from "@/components/Projects";
 import ProductThinking from "@/components/ProductThinking";
 import Journey from "@/components/Journey";
+import Award from "@/components/Award";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -18,19 +19,7 @@ export default function Home() {
             <ScrollyCanvas />
 
             <div className="relative z-10 w-full bg-[#0B0B0F]">
-                {/* ISF National Recognition — honest framing: selected + shortlisted, NOT yet won (award decided after Aug 17 2026 demo) */}
-                <section className="w-full border-y border-yellow-500/20 bg-gradient-to-r from-yellow-500/10 via-yellow-500/5 to-transparent">
-                    <div className="max-w-7xl mx-auto px-6 md:px-12 py-6 flex flex-col md:flex-row md:items-center gap-3 md:gap-6">
-                        <span className="shrink-0 inline-flex items-center gap-2 text-yellow-400 font-bold text-xs uppercase tracking-widest">
-                            <span className="h-2 w-2 rounded-full bg-yellow-400" />
-                            National Award · ISF 2026
-                        </span>
-                        <p className="text-gray-200 text-sm md:text-base leading-relaxed">
-                            <span className="font-semibold text-white">PLUTO</span> won the <span className="font-semibold text-white">Indian Staffing Federation&apos;s Staffing Excellence Recognition 2026</span> for{" "}
-                            <span className="font-semibold text-white">Outstanding Initiative</span> — awarded on stage at the ISF National Conference, Delhi (Aug 2026).
-                        </p>
-                    </div>
-                </section>
+                <Award />
                 <ProductThinking />
                 <Journey />
                 <Projects />
