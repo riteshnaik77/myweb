@@ -6,17 +6,17 @@ import { useRef } from "react";
 
 const journey = [
     {
-        year: "2023-Present",
+        year: "2022-Present",
         role: "Product Manager – AI & Automation",
         company: "PeopleLogic Business Solutions",
         type: "HRTech & AI Products",
-        description: "Leading AI roadmap and product strategy. Designing RAG systems for HR query automation that improved policy lookup efficiency by 90%. Driving end-to-end AI product portfolio from discovery to post-launch optimization.",
+        description: "Own the AI product portfolio end to end — five production AI products used daily by 150+ recruiters. With no dedicated engineering team, I run discovery, prototype, build and ship these products hands-on. PLUTO won the Indian Staffing Federation's Staffing Excellence Recognition 2026 for Outstanding Initiative.",
         milestones: [
-            "Q4 2023 — Launched RAG pilot for HR policy automation",
-            "Q1 2024 — Reduced average query lookup time by 90%",
-            "Q2 2024 — Full enterprise rollout + 95% CSAT achieved"
+            "PLUTO Resume Evaluator — 5–10 min → under 2 min; client shortlist rate 50% → 70%",
+            "Cost per evaluation ₹4 → ₹0.57 (85% cut) at ~30K evaluations/month",
+            "Aug 2026 — PLUTO won ISF Staffing Excellence Recognition 2026"
         ],
-        skills: ["AI Roadmap", "RAG Systems", "Product Strategy"],
+        skills: ["AI Product Strategy", "RAG & Agents", "Hands-on Prototyping"],
         color: "from-purple-500 to-pink-600"
     },
     {
@@ -26,9 +26,9 @@ const journey = [
         type: "Fintech SaaS",
         description: "Partnered closely with product and data teams on growth experiments, pricing strategy, and feature iteration. This role bridged the gap between my founder experience and technical PM leadership.",
         milestones: [
-            "2021 — Drove 20% increase in ARPA via pricing optimization",
-            "2021 — Accelerated customer acquisition by 30% via GTM playbooks",
-            "2022 — Built competitive intelligence frameworks for feature iteration"
+            "Translated enterprise customer feedback into prioritised product improvements",
+            "Identified onboarding friction; recommendations implemented by the product team",
+            "Delivered pricing and feature-tiering recommendations"
         ],
         skills: ["Growth Strategy", "Pricing Optimization", "GTM Playbooks"],
         color: "from-blue-500 to-indigo-600"
@@ -114,7 +114,7 @@ function JourneyCard({ item, index }: { item: typeof journey[0]; index: number }
 
                     {/* Milestones */}
                     <div className="mb-6 space-y-3">
-                        <span className="text-[10px] uppercase tracking-widest text-gray-500 font-bold block mb-2">Quarterly Milestones</span>
+                        <span className="text-[10px] uppercase tracking-widest text-gray-500 font-bold block mb-2">Key Milestones</span>
                         <div className={`flex flex-col gap-2 ${index % 2 === 0 ? 'md:items-end items-start' : 'items-start'}`}>
                             {item.milestones.map((m, mi) => (
                                 <div key={mi} className="flex items-center gap-3 text-xs text-gray-400">

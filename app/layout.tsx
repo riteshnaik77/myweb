@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
     title: "Ritesh | AI Product Manager — Enterprise AI, RAG, Automation",
-    description: "Portfolio of Ritesh — AI Product Manager and former founder. AI products with measurable business impact (90% time saved, 80% automation uplift, adoption signals). Case studies in AI workflows, RAG, and internal platforms.",
+    description: "Portfolio of Ritesh — AI Product Manager, former founder, and builder of PLUTO (winner, ISF Staffing Excellence Recognition 2026). AI products with measurable business impact (90% time saved, 80% automation uplift, adoption signals). Case studies in AI workflows, RAG, and internal platforms.",
 };
 
 export default function RootLayout({
