@@ -1,6 +1,6 @@
 # Pending Fixes — Portfolio Site
 
-Deployed at riteshexp.vercel.app via Vercel. Reconciled against CLAUDE.md §2 on 2026-09-14.
+Deployed at riteshexp.vercel.app via Vercel. Reconciled against AGENTS.md §2 on 2026-09-14.
 
 - [x] Stale metrics reconciled to the locked table (Projects.tsx, Journey.tsx) — unverified figures removed
 - [x] ISF award section live (components/Award.tsx) with stage, trophy/certificate and coffee-table-book photos
