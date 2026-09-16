@@ -38,7 +38,7 @@ const journey = [
         role: "Co-Founder",
         company: "PocketTrucks (Startup)",
         type: "Logistics Marketplace",
-        description: "Built asset-light logistics marketplace from 0→1. Achieved early fleet utilization targets and adopted rapid product-market feedback loops. Secured seed funding and managed core operations.",
+        description: "Owned product for an asset-light logistics marketplace from 0→1 — roadmap, specs and feature logic, with an outsourced development team building to them. Ran the driver and shipper feedback loop directly. Secured seed funding and managed core operations.",
         milestones: [
             "H1 2018 — MVP launch & initial shipper onboarding (50+)",
             "H2 2018 — Reached 190+ drivers & seed round completion",
