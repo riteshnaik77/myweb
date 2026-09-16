@@ -52,13 +52,13 @@ const journey = [
         role: "Procurement Engineer",
         company: "LKQ India",
         type: "Automotive Aftermarket",
-        description: "Designed analytics-powered sourcing workflows. Improved procurement productivity by 70% through process optimization and data-driven supplier management.",
+        description: "Priced salvage vehicles for Keystone's US operations from photo-based damage assessment — cross-referencing VIN history, repair records and engine specs across multiple external sources. Specified the data-aggregation requirements for an internal tool that auto-populated this information, cutting job completion time by 50%.",
         milestones: [
-            "2016 — Automated sourcing workflow design",
-            "2017 — Process optimization leading to 70% throughput gain",
-            "2018 — Advanced supplier matrix & risk mitigation launch"
+            "2016 — Photo-based salvage damage assessment and quoting",
+            "2017 — Specified requirements for an internal vehicle-data aggregation tool",
+            "2018 — Tool cut job completion time by 50% (built by the product team)"
         ],
-        skills: ["Process Optimization", "Data Analytics", "Supply Chain"],
+        skills: ["Requirements Definition", "Data Analytics", "Salvage Valuation"],
         color: "from-cyan-500 to-blue-600"
     },
     {
